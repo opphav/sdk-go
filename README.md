@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/status-alpha-orange)
 
-The official Go SDK for **Opphav**; a semiotic telemetry protocol for distributed systems.
+The official Go instrumentation SDK for **Opphav**: a semantic observability solution.
 
 ## Installation
 
