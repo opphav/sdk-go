@@ -96,10 +96,10 @@ func LookupDimension(qualified string) (Dimension, bool) {
 
 type Exchange struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Exchange {
+func New(percept *opphav.Percept, subject opphav.Subject) *Exchange {
 	if percept == nil {
 		panic("exchanges: percept must not be nil")
 	}

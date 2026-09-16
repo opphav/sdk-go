@@ -9,8 +9,8 @@ import (
 )
 
 type jsonevent struct {
-	Source    opphav.Name    `json:"source"`
-	Subject   opphav.Name    `json:"subject"`
+	Source    opphav.Subject `json:"source"`
+	Subject   opphav.Subject `json:"subject"`
 	Sign      string         `json:"sign"`
 	Dimension string         `json:"dimension,omitempty"`
 	TraceID   opphav.TraceID `json:"trace_id"`
@@ -20,7 +20,7 @@ type jsonevent struct {
 
 var _ Codec = (*JSONCodec)(nil)
 
-type newEventFunc func(source, subject opphav.Name, obs opphav.Observation, traceID opphav.TraceID, wallTime, emitTime int64) opphav.Event
+type newEventFunc func(source, subject opphav.Subject, obs opphav.Observation, traceID opphav.TraceID, wallTime, emitTime int64) opphav.Event
 
 type JSONCodec struct {
 	newEvent newEventFunc
@@ -28,7 +28,7 @@ type JSONCodec struct {
 
 func NewJSONCodec() *JSONCodec {
 	var newEvent newEventFunc
-	if cast, ok := wirehook.NewEvent.(func(opphav.Name, opphav.Name, opphav.Observation, opphav.TraceID, int64, int64) opphav.Event); ok {
+	if cast, ok := wirehook.NewEvent.(func(opphav.Subject, opphav.Subject, opphav.Observation, opphav.TraceID, int64, int64) opphav.Event); ok {
 		newEvent = cast
 	}
 

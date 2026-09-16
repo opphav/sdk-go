@@ -55,10 +55,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Gauge struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Gauge {
+func New(percept *opphav.Percept, subject opphav.Subject) *Gauge {
 	if percept == nil {
 		panic("gauges: percept must not be nil")
 	}

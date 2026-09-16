@@ -82,10 +82,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Latch struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Latch {
+func New(percept *opphav.Percept, subject opphav.Subject) *Latch {
 	if percept == nil {
 		panic("latches: percept must not be nil")
 	}

@@ -76,10 +76,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Pipeline struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Pipeline {
+func New(percept *opphav.Percept, subject opphav.Subject) *Pipeline {
 	if percept == nil {
 		panic("pipelines: percept must not be nil")
 	}

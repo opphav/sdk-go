@@ -82,10 +82,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Resource struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Resource {
+func New(percept *opphav.Percept, subject opphav.Subject) *Resource {
 	if percept == nil {
 		panic("resources: percept must not be nil")
 	}

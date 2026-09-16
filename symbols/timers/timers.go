@@ -116,10 +116,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Timer struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Timer {
+func New(percept *opphav.Percept, subject opphav.Subject) *Timer {
 	if percept == nil {
 		panic("timers: percept must not be nil")
 	}

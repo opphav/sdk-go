@@ -52,10 +52,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Queue struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Queue {
+func New(percept *opphav.Percept, subject opphav.Subject) *Queue {
 	if percept == nil {
 		panic("queues: percept must not be nil")
 	}

@@ -120,10 +120,10 @@ func LookupDimension(qualified string) (Dimension, bool) {
 
 type System struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *System {
+func New(percept *opphav.Percept, subject opphav.Subject) *System {
 	if percept == nil {
 		panic("systems: percept must not be nil")
 	}

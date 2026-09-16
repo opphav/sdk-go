@@ -186,10 +186,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Lease struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Lease {
+func New(percept *opphav.Percept, subject opphav.Subject) *Lease {
 	if percept == nil {
 		panic("leases: percept must not be nil")
 	}

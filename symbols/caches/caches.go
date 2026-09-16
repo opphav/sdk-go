@@ -86,10 +86,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Cache struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Cache {
+func New(percept *opphav.Percept, subject opphav.Subject) *Cache {
 	if percept == nil {
 		panic("caches: percept must not be nil")
 	}

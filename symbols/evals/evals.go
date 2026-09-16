@@ -164,10 +164,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Eval struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Eval {
+func New(percept *opphav.Percept, subject opphav.Subject) *Eval {
 	if percept == nil {
 		panic("evals: percept must not be nil")
 	}

@@ -49,10 +49,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Outcome struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Outcome {
+func New(percept *opphav.Percept, subject opphav.Subject) *Outcome {
 	if percept == nil {
 		panic("outcomes: percept must not be nil")
 	}

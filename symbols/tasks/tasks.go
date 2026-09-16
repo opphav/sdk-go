@@ -102,10 +102,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Task struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Task {
+func New(percept *opphav.Percept, subject opphav.Subject) *Task {
 	if percept == nil {
 		panic("tasks: percept must not be nil")
 	}

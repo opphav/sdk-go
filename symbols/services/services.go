@@ -256,10 +256,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Service struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Service {
+func New(percept *opphav.Percept, subject opphav.Subject) *Service {
 	if percept == nil {
 		panic("services: percept must not be nil")
 	}

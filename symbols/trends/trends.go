@@ -55,10 +55,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Trend struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Trend {
+func New(percept *opphav.Percept, subject opphav.Subject) *Trend {
 	if percept == nil {
 		panic("trends: percept must not be nil")
 	}

@@ -144,10 +144,10 @@ func LookupDimension(qualified string) (Dimension, bool) {
 
 type Status struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Status {
+func New(percept *opphav.Percept, subject opphav.Subject) *Status {
 	if percept == nil {
 		panic("statuses: percept must not be nil")
 	}

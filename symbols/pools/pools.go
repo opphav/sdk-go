@@ -52,10 +52,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Pool struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Pool {
+func New(percept *opphav.Percept, subject opphav.Subject) *Pool {
 	if percept == nil {
 		panic("pools: percept must not be nil")
 	}

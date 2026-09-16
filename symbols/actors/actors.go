@@ -73,10 +73,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Actor struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Actor {
+func New(percept *opphav.Percept, subject opphav.Subject) *Actor {
 	if percept == nil {
 		panic("actors: percept must not be nil")
 	}

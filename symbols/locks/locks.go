@@ -98,10 +98,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Lock struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Lock {
+func New(percept *opphav.Percept, subject opphav.Subject) *Lock {
 	if percept == nil {
 		panic("locks: percept must not be nil")
 	}

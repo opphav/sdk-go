@@ -7,8 +7,8 @@ import (
 )
 
 type Event struct {
-	source      Name
-	subject     Name
+	source      Subject
+	subject     Subject
 	observation Observation
 	traceID     TraceID
 	wallTime    int64
@@ -21,7 +21,7 @@ func init() {
 
 // NewEvent constructs a validated Event with current timestamps.
 // Like NewEventAt, it panics on absence or empty violations to fail fast.
-func NewEvent(source, subject Name, observable Observable, traceID TraceID) Event {
+func NewEvent(source, subject Subject, observable Observable, traceID TraceID) Event {
 	now := time.Now().UnixNano()
 
 	return NewEventAt(source, subject, observable, traceID, now, now)
@@ -30,7 +30,7 @@ func NewEvent(source, subject Name, observable Observable, traceID TraceID) Even
 // NewEventAt constructs a validated Event with explicit timestamps.
 // Used for explicit event creation (e.g. sidecars or gateways), it panics
 // on absence or empty violations to fail fast on misconfiguration.
-func NewEventAt(source, subject Name, observable Observable, traceID TraceID, wallTime, emitTime int64) Event {
+func NewEventAt(source, subject Subject, observable Observable, traceID TraceID, wallTime, emitTime int64) Event {
 	if isNil(observable) {
 		panic("opphav: absence violation: observation is nil")
 	}
@@ -43,11 +43,11 @@ func NewEventAt(source, subject Name, observable Observable, traceID TraceID, wa
 	return newEvent(source, subject, obs, traceID, wallTime, emitTime)
 }
 
-func (e Event) Source() Name {
+func (e Event) Source() Subject {
 	return e.source
 }
 
-func (e Event) Subject() Name {
+func (e Event) Subject() Subject {
 	return e.subject
 }
 
@@ -83,7 +83,7 @@ func (e Event) IsValid() bool {
 	return !e.observation.IsZero()
 }
 
-func newEvent(source, subject Name, obs Observation, traceID TraceID, wallTime, emitTime int64) Event {
+func newEvent(source, subject Subject, obs Observation, traceID TraceID, wallTime, emitTime int64) Event {
 	return Event{
 		source:      source,
 		subject:     subject,

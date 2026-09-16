@@ -196,10 +196,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Agent struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Agent {
+func New(percept *opphav.Percept, subject opphav.Subject) *Agent {
 	if percept == nil {
 		panic("agents: percept must not be nil")
 	}

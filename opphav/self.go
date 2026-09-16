@@ -19,14 +19,14 @@ var selfSigns = NewSignSet(
 )
 
 var (
-	selfName      = NewName(selfDomain)
+	selfSubject   = NewName(selfDomain).SubjectWithInstance("opphav")
 	heartbeatSign = selfSigns.Define("HEARTBEAT")
 )
 
 func heartbeat() Event {
 	return Event{
-		source:      selfName,
-		subject:     selfName,
+		source:      selfSubject,
+		subject:     selfSubject,
 		observation: heartbeatSign.Observation(),
 		traceID:     selfTraceID,
 		wallTime:    time.Now().UnixNano(),

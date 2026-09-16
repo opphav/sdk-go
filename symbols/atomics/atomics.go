@@ -90,10 +90,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Atomic struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Atomic {
+func New(percept *opphav.Percept, subject opphav.Subject) *Atomic {
 	if percept == nil {
 		panic("atomics: percept must not be nil")
 	}

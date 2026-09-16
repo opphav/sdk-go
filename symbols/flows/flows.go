@@ -119,10 +119,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Flow struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Flow {
+func New(percept *opphav.Percept, subject opphav.Subject) *Flow {
 	if percept == nil {
 		panic("flows: percept must not be nil")
 	}

@@ -49,10 +49,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Counter struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Counter {
+func New(percept *opphav.Percept, subject opphav.Subject) *Counter {
 	if percept == nil {
 		panic("counters: percept must not be nil")
 	}

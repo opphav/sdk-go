@@ -85,6 +85,14 @@ func (n Name) String() string {
 	return n.Path()
 }
 
+func (n Name) Subject() Subject {
+	return NewSubject(n)
+}
+
+func (n Name) SubjectWithInstance(instance string) Subject {
+	return NewSubjectWithInstance(n, instance)
+}
+
 func (n Name) MarshalJSON() ([]byte, error) {
 	return json.Marshal(n.Path())
 }

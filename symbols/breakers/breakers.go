@@ -82,10 +82,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Breaker struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Breaker {
+func New(percept *opphav.Percept, subject opphav.Subject) *Breaker {
 	if percept == nil {
 		panic("breakers: percept must not be nil")
 	}

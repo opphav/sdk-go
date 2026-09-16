@@ -82,10 +82,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Valve struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Valve {
+func New(percept *opphav.Percept, subject opphav.Subject) *Valve {
 	if percept == nil {
 		panic("valves: percept must not be nil")
 	}

@@ -49,10 +49,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Operation struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Operation {
+func New(percept *opphav.Percept, subject opphav.Subject) *Operation {
 	if percept == nil {
 		panic("operations: percept must not be nil")
 	}

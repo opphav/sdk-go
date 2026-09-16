@@ -74,10 +74,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Log struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Log {
+func New(percept *opphav.Percept, subject opphav.Subject) *Log {
 	if percept == nil {
 		panic("logs: percept must not be nil")
 	}

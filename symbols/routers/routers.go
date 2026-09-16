@@ -94,10 +94,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Router struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Router {
+func New(percept *opphav.Percept, subject opphav.Subject) *Router {
 	if percept == nil {
 		panic("routers: percept must not be nil")
 	}

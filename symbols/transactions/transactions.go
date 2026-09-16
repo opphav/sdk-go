@@ -176,10 +176,10 @@ func Kind(sign Sign) (opphav.Kind, bool) {
 
 type Transaction struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Transaction {
+func New(percept *opphav.Percept, subject opphav.Subject) *Transaction {
 	if percept == nil {
 		panic("transactions: percept must not be nil")
 	}

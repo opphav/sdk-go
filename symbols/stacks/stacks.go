@@ -52,10 +52,10 @@ func LookupSign(qualified string) (Sign, bool) {
 
 type Stack struct {
 	percept *opphav.Percept
-	subject opphav.Name
+	subject opphav.Subject
 }
 
-func New(percept *opphav.Percept, subject opphav.Name) *Stack {
+func New(percept *opphav.Percept, subject opphav.Subject) *Stack {
 	if percept == nil {
 		panic("stacks: percept must not be nil")
 	}
