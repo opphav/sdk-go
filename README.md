@@ -37,8 +37,11 @@ func main() {
 	)
 	defer dispatcher.Close()
 
-	source := opphav.NewName("example.client")
-	subject := opphav.NewName("httpbin.org")
+	var (
+		source  = opphav.NewName("example.client").Subject()
+		subject = opphav.NewName("httpbin.org").Subject()
+	)
+
 	percept := opphav.NewPercept(dispatcher, source, traceID)
 
 	percept.Emit(subject, operations.BEGIN)
